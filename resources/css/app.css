@@ -1,0 +1,304 @@
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply text-gray-700 antialiased;
+    }
+}
+
+@layer components {
+    /* Glass morphism cards */
+    .glass {
+        @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-glass;
+    }
+
+    .glass-dark {
+        @apply bg-gray-900/70 backdrop-blur-lg border border-gray-700/30 shadow-glass;
+    }
+
+    /* Gradient backgrounds */
+    .gradient-primary {
+        @apply bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500;
+    }
+
+    .gradient-hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .gradient-mesh {
+        background:
+            radial-gradient(at 40% 20%, hsla(250, 89%, 67%, 0.15) 0px, transparent 50%),
+            radial-gradient(at 80% 0%, hsla(290, 89%, 67%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 0% 50%, hsla(220, 89%, 67%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 80% 50%, hsla(340, 89%, 67%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 0% 100%, hsla(250, 89%, 67%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 80% 100%, hsla(200, 89%, 67%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 0% 0%, hsla(290, 89%, 67%, 0.1) 0px, transparent 50%);
+    }
+
+    /* Modern buttons */
+    .btn-primary {
+        @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-xl;
+        @apply bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600;
+        @apply hover:shadow-glow hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold transition-all duration-300;
+        @apply border-2 rounded-xl text-primary-600 border-primary-600 hover:bg-primary-50 hover:-translate-y-0.5;
+        @apply focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    }
+
+    .btn-glass {
+        @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white transition-all duration-300;
+        @apply rounded-xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:-translate-y-0.5;
+    }
+
+    /* Modern cards */
+    .card {
+        @apply bg-white rounded-2xl shadow-soft transition-all duration-300 hover:shadow-soft-lg hover:-translate-y-1;
+    }
+
+    .card-bordered {
+        @apply bg-white rounded-2xl border border-gray-100 shadow-sm transition-all duration-300;
+        @apply hover:shadow-soft hover:border-primary-100 hover:-translate-y-1;
+    }
+
+    /* Modern inputs */
+    .input-modern {
+        @apply w-full px-4 py-3.5 text-gray-700 bg-gray-50/50 border border-gray-200 rounded-xl transition-all duration-300;
+        @apply focus:bg-white focus:border-primary-400 focus:ring-4 focus:ring-primary-100 focus:outline-none placeholder:text-gray-400;
+    }
+
+    /* Status badges */
+    .badge {
+        @apply inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full;
+    }
+
+    .badge-success {
+        @apply bg-emerald-100 text-emerald-700 ring-1 ring-inset ring-emerald-600/20;
+    }
+
+    .badge-warning {
+        @apply bg-amber-100 text-amber-700 ring-1 ring-inset ring-amber-600/20;
+    }
+
+    .badge-danger {
+        @apply bg-red-100 text-red-700 ring-1 ring-inset ring-red-600/20;
+    }
+
+    .badge-info {
+        @apply bg-blue-100 text-blue-700 ring-1 ring-inset ring-blue-600/20;
+    }
+
+    /* Stat cards */
+    .stat-card {
+        @apply relative overflow-hidden bg-white rounded-2xl p-6 shadow-soft transition-all duration-300 hover:shadow-soft-lg;
+    }
+
+    /* Section styles */
+    .section-title {
+        @apply text-3xl md:text-4xl font-bold text-gray-900;
+    }
+
+    .section-subtitle {
+        @apply text-lg md:text-xl text-gray-600 mt-3;
+    }
+
+    /* Animated gradient text */
+    .gradient-text {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-accent-500 to-primary-600;
+    }
+
+    /* Modern table */
+    .table-modern {
+        @apply min-w-full divide-y divide-gray-100;
+    }
+
+    .table-modern thead {
+        @apply bg-gray-50/50;
+    }
+
+    .table-modern th {
+        @apply px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider;
+    }
+
+    .table-modern td {
+        @apply px-6 py-4 whitespace-nowrap text-sm;
+    }
+
+    .table-modern tbody tr {
+        @apply transition-colors hover:bg-gray-50/50;
+    }
+}
+
+@layer utilities {
+    .animation-delay-100 { animation-delay: 100ms; }
+    .animation-delay-200 { animation-delay: 200ms; }
+    .animation-delay-300 { animation-delay: 300ms; }
+    .animation-delay-400 { animation-delay: 400ms; }
+    .animation-delay-500 { animation-delay: 500ms; }
+}
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply text-gray-700 antialiased;
+    }
+}
+
+@layer components {
+    /* Glass morphism cards */
+    .glass {
+        @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-glass;
+    }
+
+    .glass-dark {
+        @apply bg-gray-900/70 backdrop-blur-lg border border-gray-700/30 shadow-glass;
+    }
+
+    /* Gradient backgrounds */
+    .gradient-primary {
+        @apply bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500;
+    }
+
+    .gradient-hero {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+
+    .gradient-mesh {
+        background:
+            radial-gradient(at 40% 20%, hsla(250, 89%, 67%, 0.15) 0px, transparent 50%),
+            radial-gradient(at 80% 0%, hsla(290, 89%, 67%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 0% 50%, hsla(220, 89%, 67%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 80% 50%, hsla(340, 89%, 67%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 0% 100%, hsla(250, 89%, 67%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 80% 100%, hsla(200, 89%, 67%, 0.1) 0px, transparent 50%),
+            radial-gradient(at 0% 0%, hsla(290, 89%, 67%, 0.1) 0px, transparent 50%);
+    }
+
+    /* Modern buttons */
+    .btn-primary {
+        @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-xl bg-gradient-to-r from-primary-600 to-primary-500 hover:from-primary-700 hover:to-primary-600 hover:shadow-glow hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold transition-all duration-300 border-2 rounded-xl text-primary-600 border-primary-600 hover:bg-primary-50 hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2;
+    }
+
+    .btn-glass {
+        @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold text-white transition-all duration-300 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 hover:bg-white/20 hover:-translate-y-0.5;
+    }
+
+    /* Modern cards */
+    .card {
+        @apply bg-white rounded-2xl shadow-soft transition-all duration-300 hover:shadow-soft-lg hover:-translate-y-1;
+    }
+
+    .card-bordered {
+        @apply bg-white rounded-2xl border border-gray-100 shadow-sm transition-all duration-300 hover:shadow-soft hover:border-primary-100 hover:-translate-y-1;
+    }
+
+    /* Modern inputs */
+    .input-modern {
+        @apply w-full px-4 py-3.5 text-gray-700 bg-gray-50/50 border border-gray-200 rounded-xl transition-all duration-300 focus:bg-white focus:border-primary-400 focus:ring-4 focus:ring-primary-100 focus:outline-none placeholder:text-gray-400;
+    }
+
+    /* Status badges */
+    .badge {
+        @apply inline-flex items-center px-3 py-1 text-xs font-semibold rounded-full;
+    }
+
+    .badge-success {
+        @apply bg-emerald-100 text-emerald-700 ring-1 ring-inset ring-emerald-600/20;
+    }
+
+    .badge-warning {
+        @apply bg-amber-100 text-amber-700 ring-1 ring-inset ring-amber-600/20;
+    }
+
+    .badge-danger {
+        @apply bg-red-100 text-red-700 ring-1 ring-inset ring-red-600/20;
+    }
+
+    .badge-info {
+        @apply bg-blue-100 text-blue-700 ring-1 ring-inset ring-blue-600/20;
+    }
+
+    /* Stat cards */
+    .stat-card {
+        @apply relative overflow-hidden bg-white rounded-2xl p-6 shadow-soft transition-all duration-300 hover:shadow-soft-lg;
+    }
+
+    .stat-card::before {
+        content: '';
+        @apply absolute top-0 right-0 w-32 h-32 -mr-8 -mt-8 rounded-full opacity-10;
+    }
+
+    /* Section styles */
+    .section-title {
+        @apply text-3xl md:text-4xl font-bold text-gray-900;
+    }
+
+    .section-subtitle {
+        @apply text-lg md:text-xl text-gray-600 mt-3;
+    }
+
+    /* Animated gradient text */
+    .gradient-text {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 via-accent-500 to-primary-600 bg-[length:200%_auto] animate-shimmer;
+    }
+
+    /* Modern table */
+    .table-modern {
+        @apply min-w-full divide-y divide-gray-100;
+    }
+
+    .table-modern thead {
+        @apply bg-gray-50/50;
+    }
+
+    .table-modern th {
+        @apply px-6 py-4 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider;
+    }
+
+    .table-modern td {
+        @apply px-6 py-4 whitespace-nowrap text-sm;
+    }
+
+    .table-modern tbody tr {
+        @apply transition-colors hover:bg-gray-50/50;
+    }
+}
+
+@layer utilities {
+    /* Animation delays */
+    .animation-delay-100 { animation-delay: 100ms; }
+    .animation-delay-200 { animation-delay: 200ms; }
+    .animation-delay-300 { animation-delay: 300ms; }
+    .animation-delay-400 { animation-delay: 400ms; }
+    .animation-delay-500 { animation-delay: 500ms; }
+
+    /* Gradient borders */
+    .border-gradient {
+        border: double 2px transparent;
+        background-image: linear-gradient(white, white), linear-gradient(to right, #6366f1, #d946ef);
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+    }
+}
